@@ -63,6 +63,9 @@ def __parse_tag(tagContents):
 				continue
 			if openApostrophe == True:
 				if char == '"':
+					attributes[attributeName] = attributeContents
+					attributeName = ''
+					attributeContents = ''
 					openApostrophe = False
 					continue
 				attributeContents += char
